@@ -35,7 +35,7 @@ import { useNavigate } from 'react-router-dom';
       <Button
         id={'button-modal'}
         type={'button'}
-        title={'Start losing wieght'}
+        title={'Start losing weight'}
         onClose={handleClick}
       />
     </div>

@@ -35,7 +35,9 @@
   flex-direction: column;
   grid-row-gap: 10px;
   @media screen and (min-width: 768px) {
-    width: 100%;
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 50%;
   }
 }
 

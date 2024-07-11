@@ -111,6 +111,23 @@ function DailyCaloriesForm({
               </div>
               <div className={styles['field__wrapper']}>
                 <Field
+                  type="desiredWeight"
+                  name="desiredWeight"
+                  placeholder="Desired Weight *"
+                  className={
+                    errors.DesiredW && touched.DesiredW
+                      ? styles['input-error']
+                      : styles['calculate__field']
+                  }
+                />
+                <ErrorMessage
+                  name="desiredWeight"
+                  component="div"
+                  className={styles['subtitle-error']}
+                />
+              </div>
+              <div className={styles['field__wrapper']}>
+                <Field
                   type="age"
                   name="age"
                   placeholder="Age *"
@@ -126,6 +143,9 @@ function DailyCaloriesForm({
                   className={styles['subtitle-error']}
                 />
               </div>
+
+              <div></div>
+
               <div className={styles['field__wrapper']}>
                 <Field
                   type="currentWeight"
@@ -143,24 +163,7 @@ function DailyCaloriesForm({
                   className={styles['subtitle-error']}
                 />
               </div>
-              <div className={styles['field__wrapper']}>
-                <Field
-                  type="desiredWeight"
-                  name="desiredWeight"
-                  placeholder="Desired Weight *"
-                  className={
-                    errors.DesiredW && touched.DesiredW
-                      ? styles['input-error']
-                      : styles['calculate__field']
-                  }
-                />
-                <ErrorMessage
-                  name="desiredWeight"
-                  component="div"
-                  className={styles['subtitle-error']}
-                />
-              </div>
-
+              
               <div className={styles['radio__wrapper']}>
                 <div id={styles['blood-group']}>Blood Type *</div>
                 <div
@@ -219,7 +222,7 @@ function DailyCaloriesForm({
                 className={
                   !(dirty && isValid && values.bloodType) ? 'disabled-btn' : ''
                 }
-                title={'Start losing wieght'}
+                title={'Start losing weight'}
               />
             </Form>
           );
